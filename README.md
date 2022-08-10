@@ -362,7 +362,6 @@ write_verilog -noattr netlistfilename.v
 flatten
 ```
 
-12.
 
 # 3. DAY 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 ## 3.1 SKY130RTL D2SK1 - Introduction to timing dot libs
@@ -434,31 +433,214 @@ The various coding styles of flops are: <br>
 5. Flop with both Synchronous and Asynchronous Reset : It resets the flop both with respect to condition of the clock and irrespective of it.
 
 ### 3.3.2 SKY130RTL D2SK3 L3 lab Flop Synthesis Simulation 
+1. Flop With Asynchronous Reset:
+![async_res1](https://user-images.githubusercontent.com/62461290/183967538-d4767a79-b2c6-4d38-9057-6260326c9e6b.png)
+![async_rst_s](https://user-images.githubusercontent.com/62461290/183967543-dee9ee1f-2a16-4b0d-b2f3-95afaaaf597e.png)
+
+2. Flop with Asynchronous Set:
+
+![async_set1](https://user-images.githubusercontent.com/62461290/183967503-82bd4084-009a-47e1-95c1-84b37495006f.png)
+![async_set_s](https://user-images.githubusercontent.com/62461290/183967547-b4942d5d-bda0-41a7-a7fd-9e47c9f93104.png)
+
+3. Flop with Synchronous Reset:
+![sync_reset](https://user-images.githubusercontent.com/62461290/183967522-8384696f-d61f-46f1-8353-5c5a490ae380.png)
+![syncres_s](https://user-images.githubusercontent.com/62461290/183967526-0bcc6a59-56c1-4dc8-bbbd-ffc8d5399443.png)
+
+4. Flop with Synchronous and Asynchronous Reset
+![asyncres_syncres](https://user-images.githubusercontent.com/62461290/183967514-db3b05f6-9034-44f4-af35-195b9ca20613.png)
+![as_sy_rst_s](https://user-images.githubusercontent.com/62461290/183967533-78fc961a-7160-4985-bde5-6709861fa819.png)
+
+
 
 ### 3.3.3 SKY130RTL D2SK3 L5 Interesting Optimisations 
 
+There is no hardware needed for the following codes <br>
+
+```
+module mul2 (input [2:0] a, output [3:0] y);
+	assign y = a * 2;
+endmodule
+```
+<b> Synthesis of the above design </b>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183961911-8fb9a923-5b4a-4d1f-be09-c62bc7fea83c.png"> <br>
+<img src="https://user-images.githubusercontent.com/62461290/183961935-19838f94-46b4-4fb7-b978-59346b57f66b.png"> <br>
+</p>
+
+```
+module mult8 (input [2:0] a , output [5:0] y);
+	assign y = a * 9
+endmodule
+```
+<b> Synthesis of the above design </b>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183961970-f6423bde-b56d-45f6-a11b-5d7c38126030.png"> <br>
+<img src="https://user-images.githubusercontent.com/62461290/183961984-9547d168-687a-46f9-ae6a-766d35763c8a.png"> <br>
+</p>
+
 # 4. DAY 3 - Combinational and Sequential Optimizations
-## 4.1 SKY130RTL D3SK1 - Introduction to Optimizations
-### 4.1.1 SKY130RTL D3SK1 L1 Introduction Optimizations Part1
-### 4.1.2 SKY130RTL D3SK2 L2 Introduction Optimizations Part2
-### 4.1.3 SKY130RTL D3SK3 L3 Introduction Optimizations Part3
-## 4.2 SKY130RTL D3SK2 - Combinational Logic Optimizations
-### 4.2.1 SKY130RTL D3SK2 L1 Lab 6 Combinational Logic Optimizations part1
-### 4.2.2 SKY130RTL D3SK2 L2 Lab 6 Combinational Logic Optimizations part2
-## 4.3 SKY130RTL D3SK3 - Sequential Logic Optimizations
-### 4.3.1 SKY130RTL D3SK3 L1 Lab 7 Sequential Logic Optimizations part1
-### 4.3.2 SKY130RTL D3SK3 L2 Lab 7 Sequential Logic Optimizations part2
-### 4.3.3 SKY130RTL D3SK3 L3 Lab 7 Sequential Logic Optimizations part3
-## 4.4 SKY130RTL D3SK3 - Sequential Logic Optimizations for unused outputs
-### 4.4.1 SKY130RTL D3SK4 L1 Sequential Logic Optimizations for unused outputs part1
-### 4.4.2 SKY130RTL D3SK4 L2 Sequential Logic Optimizations for unused outputs part2
+
+## 4.1 SKY130RTL D3SK2 - Combinational Logic Optimizations
+The following codes are optimised and the synthesis circuits are generated automatically.
+
+```
+module opt_check (input a , input b , output y);
+	assign y = a?b:0;
+endmodule
+```
+![opt_check](https://user-images.githubusercontent.com/62461290/183973366-a36a706a-4d52-4415-8d64-36ea54cfa991.png)
+<br>
+
+```
+module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+```
+![opt_check2](https://user-images.githubusercontent.com/62461290/183973369-ce115848-f256-43eb-a41b-2ddadcf0a33d.png)
+<br>
+
+```
+module opt_check3 (input a , input b, input c , output y);
+	assign y = a?(c?b:0):0;
+endmodule
+```
+![opt_check3](https://user-images.githubusercontent.com/62461290/183973359-965b8469-9460-4bb1-b3e0-565c1e21177b.png)
+<br>
+
+```
+module opt_check4 (input a , input b , input c , output y);
+ assign y = a?(b?(a & c ):c):(!c);
+endmodule
+```
+![opt_check4](https://user-images.githubusercontent.com/62461290/183973363-110141ea-6b82-4473-a193-9c8f00f49fd7.png)
+
+## 4.2 SKY130RTL D3SK3 - Sequential Logic Optimizations
+The following codes are optimised and the synthesis circuits are generated automatically. <br>
+```
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+![dff_const1](https://user-images.githubusercontent.com/62461290/183976477-dc39a704-4b05-4036-976c-3aabe3709ebe.png)
+<br>
+```
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+![dff_const2](https://user-images.githubusercontent.com/62461290/183976479-3f659072-740d-4628-a8f2-3a7aba077f20.png)
+<br>
+```
+module dff_const3(input clk, input reset, output reg q);
+reg q1;
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+endmodule
+```
+![dff_const3](https://user-images.githubusercontent.com/62461290/183976482-41a79595-ecfc-424e-b00d-4c7ef1ab5c44.png)
+<br>
+```
+module dff_const4(input clk, input reset, output reg q);
+reg q1;
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b1;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+endmodule
+```
+![dff_const4](https://user-images.githubusercontent.com/62461290/183976465-1bf36653-40ee-40d1-acf6-ee6717d7dfc1.png)
+<br>
+```
+module dff_const5(input clk, input reset, output reg q);
+reg q1;
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b0;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+endmodule
+```
+![dff_const5](https://user-images.githubusercontent.com/62461290/183976473-7f0d7366-d4a9-4431-a9a9-fa912324e33c.png)
+<br>
+
+
+
+## 4.3 SKY130RTL D3SK3 - Sequential Logic Optimizations for unused outputs
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count
+assign q = count[0];
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+endmodule
+```
+![counter_opt](https://user-images.githubusercontent.com/62461290/183979828-c9e51415-c1ce-4074-aa71-d5b686a98975.png)
 
 
 # 5. DAY 4 - GLS, Blocking VS Non-blocking and Synthesis-Simulation mismatch
 ## 5.1 SKY130RTL D4SK1 - GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking Statements
 ### 5.1.1 SKY130RTL D4SK1 L1 GLS Concepts and Flow Using iVerilog
+- GLS stands for Gate level simulation.<br>
+- It is used to verify the logical correctness of design after synthesis.<br>
+- It also ensures the timing of the design is met. The GLS needs to be run with delay annotation.<br>
+
+![Screenshot 2022-08-10 231242](https://user-images.githubusercontent.com/62461290/183980525-0f3e6f6c-fbaf-44d7-b27d-bb716e60602c.png)
+
 ### 5.1.2 SKY130RTL D4SK1 L2 Synthesis and Simulation Mismatch
+
+Synthesis Simulation Mismatch(SSM) is mainly due to two reasons.<br>
+1. Missing sensititivity list <br>
+2. Blocking and non blocking statements <br>
+
 ### 5.1.3 SKY130RTL D4SK1 L3 Blocking and Non-Blocking Statements in Verilog
+In a verilog code, blocking statements are in sequential order, where as non blocking statements are executed in concurrent fashion.<br>
+
+
 ### 5.1.4 SKY130RTL D4SK1 L4 Caveats with Blocking Statements
 ## 5.2 SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch
 ### 5.2.1 SKY130RTL D4SK2 L1 Lab GLS and Synthesis-Simulation Mismatch part1
