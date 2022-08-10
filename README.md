@@ -112,14 +112,102 @@ ASIC Design Flow Samir Palnitkar
 # 2. Day 1 - Introduction to Verilog RTL Design and Synthesis
 ## 2.1 SKY130RTL D1SK1 - Introduction to open-source simulator iverilog
 ### 2.1.1 SKY130RTL D1SK1 L1 Introduction iverilog design and test bench
-<b> Simulator </b>
-
+<b> Simulator: </b> It is a tool used to check if it adheres to the designed specs by simualting the code. <br>
+<br>
+<b> Design: </b> It is the actual verilog code or set of verilog codes which has the intended functionality to meet with the required functionality/speciifications. Design file contains one or more input/output ports.<br>
+<br>
+<b> TestBench: </b> It is the setup to apply stimulus to the design to check its functionality. Testbench doesnot contain any input/output ports. <br>
+<br>
+<b> How does a Simulator Works ? </b> <br>
+- Simulator looks for change on the input signal to produce a output signal.<br>
+- Upon change in the input signal the output signal is evaluated. i.e, If there is no change in input the output will not be evaluated.<br>
+<br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183845210-c3b9712f-c56f-4d62-98d4-34d22ad78f10.png"> <br>
+General Simulation Flow
+</p>
+<br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183845405-c8a1de5c-f949-4962-9952-6bf8e68c164f.png"> <br>
+iVerilog Based Simulation Flow
+</p>
 
 
 ## 2.2 SKY130RTL D1SK2 - Labs using iverilog  and gtkwave
 ### 2.2.1 SKY130RTL D1SK2 L1 Lab 1 Introduction to Lab
+Navigate to the directory you want the files to be stored and type the following command to get the required files.
+```
+$ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+$ cd sky130RTLDesignAndSynthesisWorkshop
+```
+<br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183880350-08096f4e-5598-4e5c-a9b6-06826bd13085.png"> <br>
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183880387-c142c1e1-ae45-4a53-96df-b4ecbc6e84db.png"> <br>
+List of all the files used in this workshop
+</p>
+
+
+
 ### 2.2.2 SKY130RTL D1SK2 L2 Lab 2 Introduction to iVerilog GTKWave part1
+In this lab we simulated a 2:1 multiplexer.<br>
+Navigate to the verilog_files folder
+
+```
+$ iverilog good_mux.v tb_good_mux.v
+$ ./a.out
+$ gtkwave tb_good_mux.vcd
+```
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183884367-cc4f41c6-cf87-4397-b785-5cad106d232b.png"> <br>
+Waveform of the 2:1 multiplexer Simulation
+</p>
+
+It can be clearly seen from waveform when select is <I> 0 </I> y is following <I> i0 </I> and when select is <I> 1 </I> y is following <I> i1 </I> <br>
+
 ### 2.2.3 SKY130RTL D1SK2 L3 Lab 2 Introduction to iVerilog GTKWave part2
+```
+Design File of 2:1 MUX
+
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (*)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+
+```
+Testbench of 2:1 MUX
+
+`timescale 1ns / 1ps
+module tb_good_mux;
+	reg i0,i1,sel; // Inputs
+	wire y;  // Outputs
+	good_mux uut (.sel(sel),.i0(i0),.i1(i1),.y(y)); // Instantiate the Unit Under Test (UUT)
+	initial begin
+	$dumpfile("tb_good_mux.vcd");
+	$dumpvars(0,tb_good_mux);
+	// Initialize Inputs
+	sel = 0;
+	i0 = 0;
+	i1 = 0;
+	#300 $finish;
+	end
+always #75 sel = ~sel;
+always #10 i0 = ~i0;
+always #55 i1 = ~i1;
+endmodule
+```
+<br>
+uut(unit under test) : It is the normal convention to name the top level module called in testbench as an uut. <br>
+
 ## 2.3 SKY130RTL D1SK3 - Introduction to Yosys and Logic Synthesis
 ### 2.3.1 SKY130RTL D1SK3 L1 Introduction to Yosys
 ### 2.3.2 SKY130RTL D1SK3 L2 Introduction to logic synthesis part1
