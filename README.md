@@ -640,35 +640,145 @@ Synthesis Simulation Mismatch(SSM) is mainly due to two reasons.<br>
 ### 5.1.3 SKY130RTL D4SK1 L3 Blocking and Non-Blocking Statements in Verilog
 In a verilog code, blocking statements are in sequential order, where as non blocking statements are executed in concurrent fashion.<br>
 
-
-### 5.1.4 SKY130RTL D4SK1 L4 Caveats with Blocking Statements
 ## 5.2 SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch
-### 5.2.1 SKY130RTL D4SK2 L1 Lab GLS and Synthesis-Simulation Mismatch part1
-### 5.2.2 SKY130RTL D4SK2 L2 Lab GLS and Synthesis-Simulation Mismatch part2
+
+```
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+<b> Simulation Waveform </b>
+![bad_mux_sim](https://user-images.githubusercontent.com/62461290/183984494-0c1d03ae-3d2f-47a1-a14e-6d3085ee9582.png)
+<b> Synthesis Waveform </b>
+![bad_mux_synth](https://user-images.githubusercontent.com/62461290/183984514-4e3f1ac6-2de0-4b41-a253-8b96139f5dfd.png)
+ 
+ Since all the inputs are not mentioned in the sensitivity list the simualtion synthesis mismatch is happening.
+
+
 ## 5.3 SKY130RTL D4SK3 - Labs on Synthesis-Simulation mismatch for blocking statements
-### 5.3.1 SKY130RTL D4SK3 L1 Lab Synthesis-Simulation mismatch for blocking statements part1
-### 5.3.2 SKY130RTL D4SK3 L2 Lab Synthesis-Simulation mismatch for blocking statements part2
+
+```
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+```
+<b> Simulation Waveform </b>
+![simu_block_cavet](https://user-images.githubusercontent.com/62461290/183991805-87730044-9410-4ff2-bc1c-3c0b82834486.png)
+<b> Synthesis Gate Diagram </b>
+![gls_blocking_cavet](https://user-images.githubusercontent.com/62461290/183991811-c4d25c15-1f56-4cee-a6b9-5a45c3041968.png)
+<b> Synthesis Waveform </b>
+![gls1_block_cavet](https://user-images.githubusercontent.com/62461290/183991814-253b2b92-f04f-4865-a7e6-a7a6e168a6b4.png)
+
+
+
   
 # 6. DAY 5 - If, case, for loop and for generate 
 ## 6.1 SKY130RTL D5SK1 - If Case constructs
-### 6.1.1 SKY130RTL D5SK1 L1 If Case Constructs part1
-### 6.1.2 SKY130RTL D5SK1 L2 If Case Constructs part2
-### 6.1.3 SKY130RTL D5SK1 L3 If Case Constructs part3
-## 6.2 SKY130RTL D5SK2 - Labs on "Incomplete If Case"
-### 6.2.1 SKY130RTL D5SK2 L1 Lab Incomplete If part1
-### 6.2.2 SKY130RTL D5SK2 L2 Lab Incomplete If part2
-## 6.3 SKY130RTL D5SK3 - Labs on "Incomplete and Overlapping Case"
-### 6.3.1 SKY130RTL D5SK3 L1 Lab Incomplete and Overlapping Case part1
-### 6.3.2 SKY130RTL D5SK3 L2 Lab Incomplete and Overlapping Case part2
-### 6.3.3 SKY130RTL D5SK3 L3 Lab Incomplete and Overlapping Case part3
-### 6.3.4 SKY130RTL D5SK3 L4 Lab Incomplete and Overlapping Case part4
-## 6.4 SKY130RTL D5SK4 - For Loop and For Generate
-### 6.4.1 SKY130RTL D5SK4 L1 For Loop and For Generate part1
-### 6.4.2 SKY130RTL D5SK4 L2 For Loop and For Generate part2
-### 6.4.3 SKY130RTL D5SK4 L3 For Loop and For Generate part3
-## 6.5 SKY130RTL D5SK5 - Labs on "For loop" and "For Generate"
-### 6.5.1 SKY130RTL D5SK5 L1 Lab For and For Generate part1
-### 6.5.2 SKY130RTL D5SK5 L2 Lab For and For Generate part2
-### 6.5.3 SKY130RTL D5SK5 L3 Lab For and For Generate part3
-### 6.5.4 SKY130RTL D5SK5 L4 Lab For and For Generate part4
+<b> 1. IF Constructs: </b>
+They are priority conditional statements. They invoke mux when all the conditions are written properly. They invoke latches when there are missing conditions/statements.
 
+<b> 2. Case Constructs: </b>
+
+Case statements unlike if statements are not priority conditional statements. They also invoke mux when written properly and invoke latches when there are missing statements or overlaps.
+
+## 6.2 SKY130RTL D5SK2 - Labs on "Incomplete If Case"
+This example inferres a latch for i0=0 
+```
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+end
+endmodule
+```
+![incomp_if](https://user-images.githubusercontent.com/62461290/183995763-2fcf2fef-fce7-4168-b663-4c1da34bb1f8.png)
+
+## 6.3 SKY130RTL D5SK3 - Labs on "Incomplete and Overlapping Case"
+In the below example there is a missing assigment statement for 10 and 11 cases
+```
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+```
+![incomp_mux](https://user-images.githubusercontent.com/62461290/183997092-1113effd-1242-4623-91fb-9dbc797d0c7c.png)
+![incomp_mux_1](https://user-images.githubusercontent.com/62461290/183997109-7d42bd78-7c51-4f60-9ad1-053bb7c1c621.png)
+
+## 6.4 SKY130RTL D5SK4 - For Loop and For Generate
+<b> 1. For Loop </b>
+For loops are written inside the always block and it doesnot generate any hardware. <br>
+
+<b> 2. For Generate </b>
+For Generate is written outside the always block and is used to generate same peace of hardware multiple times. <br>
+
+## 6.5 SKY130RTL D5SK5 - Labs on "For loop" and "For Generate"
+
+<b> Example for For loop </b>
+```
+4:1 MUX
+
+module mux_generate (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
+wire [3:0] i_int;
+assign i_int = {i3,i2,i1,i0};
+integer k;
+always @ (*)
+begin
+for(k = 0; k < 4; k=k+1) begin
+	if(k == sel)
+		y = i_int[k];
+end
+end
+endmodule
+```
+![for1](https://user-images.githubusercontent.com/62461290/184001625-efae08dd-e9f2-4529-b49a-675e0264901f.png)
+![for2](https://user-images.githubusercontent.com/62461290/184001607-6da95fd5-3776-40fb-a2fc-8ea5b566a90b.png)
+
+
+<b> Example for For Generate </b>
+```
+8 bit ripple carry adder
+
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
+genvar i;
+generate
+	for (i = 1 ; i < 8; i=i+1) begin
+		fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+	end
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
+endmodule
+```
+![forgen1](https://user-images.githubusercontent.com/62461290/184001924-733ceefc-6dd0-4996-9833-e52e2da540c6.png)
+![forgen2](https://user-images.githubusercontent.com/62461290/184001930-c357cd1c-6231-4893-a7bb-f1d278f8276b.png)
+
+# Contributors
+- Dantu Nandini Devi
+- Kunal Ghosh
+
+# Acknowledgment
+I would like to express my gratitute to VLSI System Design for designing and structuring such a wonderful workshop which gives various insights on the tips and tricks to be followed and noticed while designing a VLSI System. It gave me a lot of perspective on how to think on a hardware level rather than on a software level. A special mention to Kunal Ghosh for helping us out throughout the workshop.
+
+# Contact Information
+- Dantu Nandini Devi, MS by Research Student, International Institute of Information Technology, Bangalore nandini.dantu@gmail.com
+- Kunal Ghosh, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
