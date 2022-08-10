@@ -6,90 +6,90 @@
 
 [1. Introduction](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/edit/main/README.md#1-Introduction) <br>
 
-[2. DAY 1 - Introduction to Verilog RTL Design and Synthesis]() <br>
-* [2.1 SKY130RTL D1SK1 - Introduction to open-source simulator iverilog]() <br>
-  - [2.1.1 SKY130RTL D1SK1 L1 Introduction iverilog design and test bench]() <br>
-* [2.2 SKY130RTL D1SK2 - Labs using iverilog  and gtkwave]() <br>
-  - [2.2.1 SKY130RTL D1SK2 L1 Lab 1 Introduction to Lab]() <br>
-  - [2.2.2 SKY130RTL D1SK2 L2 Lab 2 Introduction to iVerilog GTKWave part1]() <br>
-  - [2.2.3 SKY130RTL D1SK2 L3 Lab 2 Introduction to iVerilog GTKWave part2]() <br>
-* [2.3 SKY130RTL D1SK3 - Introduction to Yosys and Logic Synthesis]() <br>
-  - [2.3.1 SKY130RTL D1SK3 L1 Introduction to Yosys]() <br>
-  - [2.3.2 SKY130RTL D1SK3 L2 Introduction to logic synthesis part1]() <br>
-  - [2.3.3 SKY130RTL D1SK3 L3 Introduction to logic synthesis part2]() <br>
-* [2.4 SKY130RTL D1SK4 - Labs Using Yosys and SKY130 PDKs]() <br>
-  - [2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux part1]() <br>
-  - [2.4.2 SKY130RTL D1SK4 L2 lab3 Yosys 1 good mux part2]() <br>
-  - [2.4.3 SKY130RTL D1SK4 L3 lab3 Yosys 1 good mux part3]() <br>
+[2. DAY 1 - Introduction to Verilog RTL Design and Synthesis](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#2-day-1---introduction-to-verilog-rtl-design-and-synthesis) <br>
+* [2.1 SKY130RTL D1SK1 - Introduction to open-source simulator iverilog](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#21-sky130rtl-d1sk1---introduction-to-open-source-simulator-iverilog) <br>
+  - [2.1.1 SKY130RTL D1SK1 L1 Introduction iverilog design and test bench](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#211-sky130rtl-d1sk1-l1-introduction-iverilog-design-and-test-bench) <br>
+* [2.2 SKY130RTL D1SK2 - Labs using iverilog  and gtkwave](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#22-sky130rtl-d1sk2---labs-using-iverilog--and-gtkwave) <br>
+  - [2.2.1 SKY130RTL D1SK2 L1 Lab 1 Introduction to Lab](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#221-sky130rtl-d1sk2-l1-lab-1-introduction-to-lab) <br>
+  - [2.2.2 SKY130RTL D1SK2 L2 Lab 2 Introduction to iVerilog GTKWave part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#222-sky130rtl-d1sk2-l2-lab-2-introduction-to-iverilog-gtkwave-part1) <br>
+  - [2.2.3 SKY130RTL D1SK2 L3 Lab 2 Introduction to iVerilog GTKWave part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#223-sky130rtl-d1sk2-l3-lab-2-introduction-to-iverilog-gtkwave-part2) <br>
+* [2.3 SKY130RTL D1SK3 - Introduction to Yosys and Logic Synthesis](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#23-sky130rtl-d1sk3---introduction-to-yosys-and-logic-synthesis) <br>
+  - [2.3.1 SKY130RTL D1SK3 L1 Introduction to Yosys](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#231-sky130rtl-d1sk3-l1-introduction-to-yosys) <br>
+  - [2.3.2 SKY130RTL D1SK3 L2 Introduction to logic synthesis part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#232-sky130rtl-d1sk3-l2-introduction-to-logic-synthesis-part1) <br>
+  - [2.3.3 SKY130RTL D1SK3 L3 Introduction to logic synthesis part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#233-sky130rtl-d1sk3-l3-introduction-to-logic-synthesis-part2) <br>
+* [2.4 SKY130RTL D1SK4 - Labs Using Yosys and SKY130 PDKs](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#24-sky130rtl-d1sk4---labs-using-yosys-and-sky130-pdks) <br>
+  - [2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#241-sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part1) <br>
+  - [2.4.2 SKY130RTL D1SK4 L2 lab3 Yosys 1 good mux part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#242-sky130rtl-d1sk4-l2-lab3-yosys-1-good-mux-part2) <br>
+  - [2.4.3 SKY130RTL D1SK4 L3 lab3 Yosys 1 good mux part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#243-sky130rtl-d1sk4-l3-lab3-yosys-1-good-mux-part3) <br>
 
-[3. DAY 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles]() <br>
-* [3.1 SKY130RTL D2SK1 - Introduction to timing .libs]() <br>
-  - [3.1.1 SKY130RTL D2SK1 L1 Lab4 Introduction to dot lib part1]() <br>
-  - [3.1.2 SKY130RTL D2SK1 L2 Lab4 Introduction to dot lib part2]() <br>
-  - [3.1.3 SKY130RTL D2SK1 L3 Lab4 Introduction to dot lib part3]() <br>
+[3. DAY 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#3-day-2---timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles) <br>
+* [3.1 SKY130RTL D2SK1 - Introduction to timing .libs](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#31-sky130rtl-d2sk1---introduction-to-timing-dot-libs) <br>
+  - [3.1.1 SKY130RTL D2SK1 L1 Lab4 Introduction to dot lib part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#311-sky130rtl-d2sk1-l1-lab4-introduction-to-dot-lib-part1) <br>
+  - [3.1.2 SKY130RTL D2SK1 L2 Lab4 Introduction to dot lib part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#312-sky130rtl-d2sk1-l2-lab4-introduction-to-dot-lib-part2) <br>
+  - [3.1.3 SKY130RTL D2SK1 L3 Lab4 Introduction to dot lib part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#313-sky130rtl-d2sk1-l3-lab4-introduction-to-dot-lib-part3) <br>
 * [3.2 SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis]() <br>
-  - [3.2.1 SKY130RTL D2SK2 L1 Lab 5 Hierarchical vs Flat Synthesis part1]() <br>
-  - [3.2.2 SKY130RTL D2SK2 L2 Lab 5 Hierarchical vs Flat Synthesis part2]() <br>
-* [3.3 SKY130RTL D2SK3 - Various Flop Coding Styles and Optimization]() <br>
-  - [3.3.1 SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1]() <br>
-  - [3.3.2 SKY130RTL D2SK3 L2 Why Flops and Flop coding styles part2]() <br>
-  - [3.3.3 SKY130RTL D2SK3 L3 lab Flop Synthesis Simulation part1]() <br>
-  - [3.3.4 SKY130RTL D2SK3 L4 lab Flop Synthesis Simulation part2]() <br>
-  - [3.3.5 SKY130RTL D2SK3 L5 Interesting Optimisations part1]() <br>
-  - [3.3.6 SKY130RTL D2SK3 L6 Interesting Optimisations part2]() <br>
+  - [3.2.1 SKY130RTL D2SK2 L1 Lab 5 Hierarchical vs Flat Synthesis part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#32-sky130rtl-d2sk2---hierarchical-vs-flat-synthesis) <br>
+  - [3.2.2 SKY130RTL D2SK2 L2 Lab 5 Hierarchical vs Flat Synthesis part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#322-sky130rtl-d2sk2-l2-lab-5-hierarchical-vs-flat-synthesis-part2) <br>
+* [3.3 SKY130RTL D2SK3 - Various Flop Coding Styles and Optimization](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#33-sky130rtl-d2sk3---various-flop-coding-styles-and-optimization) <br>
+  - [3.3.1 SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#331-sky130rtl-d2sk3-l1-why-flops-and-flop-coding-styles-part1) <br>
+  - [3.3.2 SKY130RTL D2SK3 L2 Why Flops and Flop coding styles part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#332-sky130rtl-d2sk3-l2-why-flops-and-flop-coding-styles-part2) <br>
+  - [3.3.3 SKY130RTL D2SK3 L3 lab Flop Synthesis Simulation part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#333-sky130rtl-d2sk3-l3-lab-flop-synthesis-simulation-part1) <br>
+  - [3.3.4 SKY130RTL D2SK3 L4 lab Flop Synthesis Simulation part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#334-sky130rtl-d2sk3-l4-lab-flop-synthesis-simulation-part2) <br>
+  - [3.3.5 SKY130RTL D2SK3 L5 Interesting Optimisations part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#335-sky130rtl-d2sk3-l5-interesting-optimisations-part1) <br>
+  - [3.3.6 SKY130RTL D2SK3 L6 Interesting Optimisations part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#336-sky130rtl-d2sk3-l6-interesting-optimisations-part2) <br>
 
-[4. DAY 3 - Combinational and Sequential Optimizations]() <br>
-* [4.1 SKY130RTL D3SK1 - Introduction to Optimizations]() <br>
-  - [4.1.1 SKY130RTL D3SK1 L1 Introduction Optimizations Part1]() <br>
-  - [4.1.2 SKY130RTL D3SK2 L2 Introduction Optimizations Part2]() <br>
-  - [4.1.3 SKY130RTL D3SK3 L3 Introduction Optimizations Part3]() <br>
-* [4.2 SKY130RTL D3SK2 - Combinational Logic Optimizations]() <br>
-  - [4.2.1 SKY130RTL D3SK2 L1 Lab 6 Combinational Logic Optimizations part1]() <br>
-  - [4.2.2 SKY130RTL D3SK2 L2 Lab 6 Combinational Logic Optimizations part2]() <br>
-* [4.3 SKY130RTL D3SK3 - Sequential Logic Optimizations]() <br>
-  - [4.3.1 SKY130RTL D3SK3 L1 Lab 7 Sequential Logic Optimizations part1]() <br>
-  - [4.3.2 SKY130RTL D3SK3 L2 Lab 7 Sequential Logic Optimizations part2]() <br>
-  - [4.3.3 SKY130RTL D3SK3 L3 Lab 7 Sequential Logic Optimizations part3]() <br>
-* [4.4 SKY130RTL D3SK3 - Sequential Logic Optimizations for unused outputs]() <br>
-  - [4.4.1 SKY130RTL D3SK4 L1 Sequential Logic Optimizations for unused outputs part1]() <br>
-  - [4.4.2 SKY130RTL D3SK4 L2 Sequential Logic Optimizations for unused outputs part2]() <br>
+[4. DAY 3 - Combinational and Sequential Optimizations](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#4-day-3---combinational-and-sequential-optimizations) <br>
+* [4.1 SKY130RTL D3SK1 - Introduction to Optimizations](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#41-sky130rtl-d3sk1---introduction-to-optimizations) <br>
+  - [4.1.1 SKY130RTL D3SK1 L1 Introduction Optimizations Part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#411-sky130rtl-d3sk1-l1-introduction-optimizations-part1) <br>
+  - [4.1.2 SKY130RTL D3SK2 L2 Introduction Optimizations Part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#412-sky130rtl-d3sk2-l2-introduction-optimizations-part2) <br>
+  - [4.1.3 SKY130RTL D3SK3 L3 Introduction Optimizations Part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#413-sky130rtl-d3sk3-l3-introduction-optimizations-part3) <br>
+* [4.2 SKY130RTL D3SK2 - Combinational Logic Optimizations](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#42-sky130rtl-d3sk2---combinational-logic-optimizations) <br>
+  - [4.2.1 SKY130RTL D3SK2 L1 Lab 6 Combinational Logic Optimizations part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#421-sky130rtl-d3sk2-l1-lab-6-combinational-logic-optimizations-part1) <br>
+  - [4.2.2 SKY130RTL D3SK2 L2 Lab 6 Combinational Logic Optimizations part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#422-sky130rtl-d3sk2-l2-lab-6-combinational-logic-optimizations-part2) <br>
+* [4.3 SKY130RTL D3SK3 - Sequential Logic Optimizations](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#43-sky130rtl-d3sk3---sequential-logic-optimizations) <br>
+  - [4.3.1 SKY130RTL D3SK3 L1 Lab 7 Sequential Logic Optimizations part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#431-sky130rtl-d3sk3-l1-lab-7-sequential-logic-optimizations-part1) <br>
+  - [4.3.2 SKY130RTL D3SK3 L2 Lab 7 Sequential Logic Optimizations part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#432-sky130rtl-d3sk3-l2-lab-7-sequential-logic-optimizations-part2) <br>
+  - [4.3.3 SKY130RTL D3SK3 L3 Lab 7 Sequential Logic Optimizations part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#433-sky130rtl-d3sk3-l3-lab-7-sequential-logic-optimizations-part3) <br>
+* [4.4 SKY130RTL D3SK3 - Sequential Logic Optimizations for unused outputs](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#44-sky130rtl-d3sk3---sequential-logic-optimizations-for-unused-outputs) <br>
+  - [4.4.1 SKY130RTL D3SK4 L1 Sequential Logic Optimizations for unused outputs part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#441-sky130rtl-d3sk4-l1-sequential-logic-optimizations-for-unused-outputs-part1) <br>
+  - [4.4.2 SKY130RTL D3SK4 L2 Sequential Logic Optimizations for unused outputs part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#442-sky130rtl-d3sk4-l2-sequential-logic-optimizations-for-unused-outputs-part2) <br>
 
 
-[5. DAY 4 - GLS, Blocking VS Non-blocking and Synthesis-Simulation mismatch]() <br>
-* [5.1 SKY130RTL D4SK1 - GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking Statements]() <br>
-  - [5.1.1 SKY130RTL D4SK1 L1 GLS Concepts and Flow Using iVerilog]() <br>
-  - [5.1.2 SKY130RTL D4SK1 L2 Synthesis and Simulation Mismatch]() <br>
-  - [5.1.3 SKY130RTL D4SK1 L3 Blocking and Non-Blocking Statements in Verilog]() <br>
-  - [5.1.4 SKY130RTL D4SK1 L4 Caveats with Blocking Statements]() <br>
-* [5.2 SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch]() <br>
-  - [5.2.1 SKY130RTL D4SK2 L1 Lab GLS and Synthesis-Simulation Mismatch part1]() <br>
-  - [5.2.2 SKY130RTL D4SK2 L2 Lab GLS and Synthesis-Simulation Mismatch part2]() <br>
-* [5.3 SKY130RTL D4SK3 - Labs on Synthesis-Simulation mismatch for blocking statements]() <br>
-  - [5.3.1 SKY130RTL D4SK3 L1 Lab Synthesis-Simulation mismatch for blocking statements part1]() <br>
-  - [5.3.2 SKY130RTL D4SK3 L2 Lab Synthesis-Simulation mismatch for blocking statements part2]() <br>
+[5. DAY 4 - GLS, Blocking VS Non-blocking and Synthesis-Simulation mismatch](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#5-day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch) <br>
+* [5.1 SKY130RTL D4SK1 - GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking Statements](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#51-sky130rtl-d4sk1---gls-synthesis-simulation-mismatch-and-blockingnon-blocking-statements) <br>
+  - [5.1.1 SKY130RTL D4SK1 L1 GLS Concepts and Flow Using iVerilog](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#511-sky130rtl-d4sk1-l1-gls-concepts-and-flow-using-iverilog) <br>
+  - [5.1.2 SKY130RTL D4SK1 L2 Synthesis and Simulation Mismatch](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#512-sky130rtl-d4sk1-l2-synthesis-and-simulation-mismatch) <br>
+  - [5.1.3 SKY130RTL D4SK1 L3 Blocking and Non-Blocking Statements in Verilog](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#513-sky130rtl-d4sk1-l3-blocking-and-non-blocking-statements-in-verilog) <br>
+  - [5.1.4 SKY130RTL D4SK1 L4 Caveats with Blocking Statements](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#514-sky130rtl-d4sk1-l4-caveats-with-blocking-statements) <br>
+* [5.2 SKY130RTL D4SK2 - Labs on GLS and Synthesis-Simulation Mismatch](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#52-sky130rtl-d4sk2---labs-on-gls-and-synthesis-simulation-mismatch) <br>
+  - [5.2.1 SKY130RTL D4SK2 L1 Lab GLS and Synthesis-Simulation Mismatch part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#52-sky130rtl-d4sk2---labs-on-gls-and-synthesis-simulation-mismatch) <br>
+  - [5.2.2 SKY130RTL D4SK2 L2 Lab GLS and Synthesis-Simulation Mismatch part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#522-sky130rtl-d4sk2-l2-lab-gls-and-synthesis-simulation-mismatch-part2) <br>
+* [5.3 SKY130RTL D4SK3 - Labs on Synthesis-Simulation mismatch for blocking statements](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#53-sky130rtl-d4sk3---labs-on-synthesis-simulation-mismatch-for-blocking-statements) <br>
+  - [5.3.1 SKY130RTL D4SK3 L1 Lab Synthesis-Simulation mismatch for blocking statements part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#531-sky130rtl-d4sk3-l1-lab-synthesis-simulation-mismatch-for-blocking-statements-part1) <br>
+  - [5.3.2 SKY130RTL D4SK3 L2 Lab Synthesis-Simulation mismatch for blocking statements part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#532-sky130rtl-d4sk3-l2-lab-synthesis-simulation-mismatch-for-blocking-statements-part2) <br>
   
-[6. DAY 5 - If, case, for loop and for generate ]() <br>
-* [6.1 SKY130RTL D5SK1 - If Case constructs]() <br>
-  - [6.1.1 SKY130RTL D5SK1 L1 If Case Constructs part1]() <br>
-  - [6.1.2 SKY130RTL D5SK1 L2 If Case Constructs part2]() <br>
-  - [6.1.3 SKY130RTL D5SK1 L3 If Case Constructs part3]() <br>
-* [6.2 SKY130RTL D5SK2 - Labs on "Incomplete If Case"]() <br>
-  - [6.2.1 SKY130RTL D5SK2 L1 Lab Incomplete If part1]() <br>
-  - [6.2.2 SKY130RTL D5SK2 L2 Lab Incomplete If part2]() <br>
-* [6.3 SKY130RTL D5SK3 - Labs on "Incomplete and Overlapping Case"]() <br>
-  - [6.3.1 SKY130RTL D5SK3 L1 Lab Incomplete and Overlapping Case part1]() <br>
-  - [6.3.2 SKY130RTL D5SK3 L2 Lab Incomplete and Overlapping Case part2]() <br>
-  - [6.3.3 SKY130RTL D5SK3 L3 Lab Incomplete and Overlapping Case part3]() <br>
-  - [6.3.4 SKY130RTL D5SK3 L4 Lab Incomplete and Overlapping Case part4]() <br>
-* [6.4 SKY130RTL D5SK4 - For Loop and For Generate]() <br>
-  - [6.4.1 SKY130RTL D5SK4 L1 For Loop and For Generate part1]() <br>
-  - [6.4.2 SKY130RTL D5SK4 L2 For Loop and For Generate part2]() <br>
-  - [6.4.3 SKY130RTL D5SK4 L3 For Loop and For Generate part3]() <br>
-* [6.5 SKY130RTL D5SK5 - Labs on "For loop" and "For Generate"]() <br>
-  - [6.5.1 SKY130RTL D5SK5 L1 Lab For and For Generate part1]() <br>
-  - [6.5.2 SKY130RTL D5SK5 L2 Lab For and For Generate part2]() <br>
-  - [6.5.3 SKY130RTL D5SK5 L3 Lab For and For Generate part3]() <br>
-  - [6.5.4 SKY130RTL D5SK5 L4 Lab For and For Generate part4]() <br>
+[6. DAY 5 - If, case, for loop and for generate ](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#6-day-5---if-case-for-loop-and-for-generate) <br>
+* [6.1 SKY130RTL D5SK1 - If Case constructs](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#61-sky130rtl-d5sk1---if-case-constructs) <br>
+  - [6.1.1 SKY130RTL D5SK1 L1 If Case Constructs part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#611-sky130rtl-d5sk1-l1-if-case-constructs-part1) <br>
+  - [6.1.2 SKY130RTL D5SK1 L2 If Case Constructs part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#612-sky130rtl-d5sk1-l2-if-case-constructs-part2) <br>
+  - [6.1.3 SKY130RTL D5SK1 L3 If Case Constructs part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#613-sky130rtl-d5sk1-l3-if-case-constructs-part3) <br>
+* [6.2 SKY130RTL D5SK2 - Labs on "Incomplete If Case"](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#62-sky130rtl-d5sk2---labs-on-incomplete-if-case) <br>
+  - [6.2.1 SKY130RTL D5SK2 L1 Lab Incomplete If part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#621-sky130rtl-d5sk2-l1-lab-incomplete-if-part1) <br>
+  - [6.2.2 SKY130RTL D5SK2 L2 Lab Incomplete If part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#622-sky130rtl-d5sk2-l2-lab-incomplete-if-part2) <br>
+* [6.3 SKY130RTL D5SK3 - Labs on "Incomplete and Overlapping Case"](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#63-sky130rtl-d5sk3---labs-on-incomplete-and-overlapping-case) <br>
+  - [6.3.1 SKY130RTL D5SK3 L1 Lab Incomplete and Overlapping Case part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#631-sky130rtl-d5sk3-l1-lab-incomplete-and-overlapping-case-part1) <br>
+  - [6.3.2 SKY130RTL D5SK3 L2 Lab Incomplete and Overlapping Case part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#632-sky130rtl-d5sk3-l2-lab-incomplete-and-overlapping-case-part2) <br>
+  - [6.3.3 SKY130RTL D5SK3 L3 Lab Incomplete and Overlapping Case part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#633-sky130rtl-d5sk3-l3-lab-incomplete-and-overlapping-case-part3) <br>
+  - [6.3.4 SKY130RTL D5SK3 L4 Lab Incomplete and Overlapping Case part4](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#634-sky130rtl-d5sk3-l4-lab-incomplete-and-overlapping-case-part4) <br>
+* [6.4 SKY130RTL D5SK4 - For Loop and For Generate](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#64-sky130rtl-d5sk4---for-loop-and-for-generate) <br>
+  - [6.4.1 SKY130RTL D5SK4 L1 For Loop and For Generate part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#641-sky130rtl-d5sk4-l1-for-loop-and-for-generate-part1) <br>
+  - [6.4.2 SKY130RTL D5SK4 L2 For Loop and For Generate part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#642-sky130rtl-d5sk4-l2-for-loop-and-for-generate-part2) <br>
+  - [6.4.3 SKY130RTL D5SK4 L3 For Loop and For Generate part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#643-sky130rtl-d5sk4-l3-for-loop-and-for-generate-part3) <br>
+* [6.5 SKY130RTL D5SK5 - Labs on "For loop" and "For Generate"](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#65-sky130rtl-d5sk5---labs-on-for-loop-and-for-generate) <br>
+  - [6.5.1 SKY130RTL D5SK5 L1 Lab For and For Generate part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#651-sky130rtl-d5sk5-l1-lab-for-and-for-generate-part1) <br>
+  - [6.5.2 SKY130RTL D5SK5 L2 Lab For and For Generate part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#652-sky130rtl-d5sk5-l2-lab-for-and-for-generate-part2) <br>
+  - [6.5.3 SKY130RTL D5SK5 L3 Lab For and For Generate part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#653-sky130rtl-d5sk5-l3-lab-for-and-for-generate-part3) <br>
+  - [6.5.4 SKY130RTL D5SK5 L4 Lab For and For Generate part4](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#654-sky130rtl-d5sk5-l4-lab-for-and-for-generate-part4) <br>
  
 
 
