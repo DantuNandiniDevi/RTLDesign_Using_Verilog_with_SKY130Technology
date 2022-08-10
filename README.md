@@ -210,7 +210,25 @@ uut(unit under test) : It is the normal convention to name the top level module 
 
 ## 2.3 SKY130RTL D1SK3 - Introduction to Yosys and Logic Synthesis
 ### 2.3.1 SKY130RTL D1SK3 L1 Introduction to Yosys
+
+- Synthesizer is a tool used for converting the RTL to Netlist. <br>
+- Yosys is the synthesizer used in this course.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183900424-3847b18b-362f-403c-a932-94ae04f9d846.png"> <br>
+Yosys Synthesis Setup
+</p>
+
+The same testbench that is used for the simulation can be used for the synthesized netlist as well. The output waveform of both Synthesis and Simulation have to match. <br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183900461-350aa07f-ed24-41fc-8478-4ef49b2b8d73.png"> <br>
+Verification of Synthesized Netlist
+</p>
+
 ### 2.3.2 SKY130RTL D1SK3 L2 Introduction to logic synthesis part1
+<b> Synthesis: </b>
+- The RTL gn is converted into gates and the connections are made between gates.
+- This is given out as a file called netlist
 ### 2.3.3 SKY130RTL D1SK3 L3 Introduction to logic synthesis part2
 ## 2.4 SKY130RTL D1SK4 - Labs Using Yosys and SKY130 PDKs
 ### 2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux part1
