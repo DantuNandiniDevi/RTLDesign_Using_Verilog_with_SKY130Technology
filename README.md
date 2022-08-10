@@ -18,9 +18,7 @@
   - [2.3.2 SKY130RTL D1SK3 L2 Introduction to logic synthesis part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#232-sky130rtl-d1sk3-l2-introduction-to-logic-synthesis-part1) <br>
   - [2.3.3 SKY130RTL D1SK3 L3 Introduction to logic synthesis part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#233-sky130rtl-d1sk3-l3-introduction-to-logic-synthesis-part2) <br>
 * [2.4 SKY130RTL D1SK4 - Labs Using Yosys and SKY130 PDKs](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#24-sky130rtl-d1sk4---labs-using-yosys-and-sky130-pdks) <br>
-  - [2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux part1](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#241-sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux-part1) <br>
-  - [2.4.2 SKY130RTL D1SK4 L2 lab3 Yosys 1 good mux part2](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#242-sky130rtl-d1sk4-l2-lab3-yosys-1-good-mux-part2) <br>
-  - [2.4.3 SKY130RTL D1SK4 L3 lab3 Yosys 1 good mux part3](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#243-sky130rtl-d1sk4-l3-lab3-yosys-1-good-mux-part3) <br>
+  - [2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#241-sky130rtl-d1sk4-l1-lab3-yosys-1-good-mux) <br>
 
 [3. DAY 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#3-day-2---timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles) <br>
 * [3.1 SKY130RTL D2SK1 - Introduction to timing .libs](https://github.com/DantuNandiniDevi/RTLDesign_Using_Verilog_with_SKY130Technology/blob/main/README.md#31-sky130rtl-d2sk1---introduction-to-timing-dot-libs) <br>
@@ -230,6 +228,10 @@ Verification of Synthesized Netlist
 - The RTL design is converted into gates and the connections are made between gates. <br>
 - This is given out as a file called netlist. <br>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183910992-4910d098-f175-484f-8dcc-20a989d41967.png"> <br>
+</p>
+
 <b> .lib </b>
 - It contains all different kind of logic modules. like AND, OR, NOR etc.<br>
 - It contains different variants of the same gate as well. like 2i/p, 3i/p, 4i/p, slow, fast, medium gates etc.<br>
@@ -238,26 +240,202 @@ There are different kind of gates avaiable to take in account the performance pa
 - If we choose speed we trade off area and power likewise if we choose area we trade off delay. Hence we have to choose them either based on the design constrains or find a sweet spot between all of them.
 
 ### 2.3.3 SKY130RTL D1SK3 L3 Introduction to logic synthesis part2
+
+- Load in a digital logic circuit is a capacitor. <br>
+- Fater the charging and discharging of capacitance the lesser is the delay. <br>
+- To charge/Discharge the capacitor fast, we need transistors capable of sourcing more current. <br>
+- Wider transistors -> low delay -> More Power and Area. <br>
+- Narrow transitor -> More delay -> Less Area and Power. <br>
+
+<b> Selection of Cells </b> <br>
+- Need to guide the synthesizer to select the flavour of cells that is optimum for the implementation of logic circuits. <br>
+- More use of fast cells can be bad interms of power and area. <br>
+- More use of slow cells can lead to a sluggish circuit. <br>
+- The guidence offered to the synthesizer is called constraints <br>
+
 ## 2.4 SKY130RTL D1SK4 - Labs Using Yosys and SKY130 PDKs
-### 2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux part1
-### 2.4.2 SKY130RTL D1SK4 L2 lab3 Yosys 1 good mux part2
-### 2.4.3 SKY130RTL D1SK4 L3 lab3 Yosys 1 good mux part3
+### 2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux
+Run the Following command in the terminal path where the respective files are saved.
+
+```
+$ yosys
+$ read_liberty -lib /home/nandu/ASIC/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog good_mux.v
+$ synth -top good_mux
+$ abc -liberty /home/nandu/ASIC/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+$ write_verilog -noattr good_mux_netlist.v
+```
+![Screenshot 2022-08-10 185824](https://user-images.githubusercontent.com/62461290/183915651-27b843a9-a4d4-465e-a367-021ea778e72e.png)
+![Screenshot 2022-08-10 185805](https://user-images.githubusercontent.com/62461290/183915678-d039ba7e-ed50-457b-a8d1-c55e04b5ea6e.png)
+![Screenshot 2022-08-10 185748](https://user-images.githubusercontent.com/62461290/183915719-bfeef00a-902f-4399-b3ed-4c6eb7789deb.png)
+![Screenshot 2022-08-10 185716](https://user-images.githubusercontent.com/62461290/183915736-9062716e-656c-482b-aba0-3e9850e61b86.png)
+![Screenshot 2022-08-10 185843](https://user-images.githubusercontent.com/62461290/183915748-6bcce7b9-74ff-4091-87f3-e613a021a76e.png)
+![Screenshot 2022-08-10 190142](https://user-images.githubusercontent.com/62461290/183915783-6c390ea5-f1fd-4972-b1f2-84033ebc1642.png)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183915828-b6df3261-9923-4903-8a28-a7502b58988d.png"> <br>
+Gate level model Generated
+</p>
+
+
+```
+Netlist File Generated
+
+/* Generated by Yosys 0.20+1 (git sha1 60a787fa500, clang  -fPIC -Os) */
+module good_mux(i0, i1, sel, y);
+  wire _0_;
+  wire _1_;
+  wire _2_;
+  wire _3_;
+  input i0;
+  wire i0;
+  input i1;
+  wire i1;
+  input sel;
+  wire sel;
+  output y;
+  wire y;
+  sky130_fd_sc_hd__mux2_1 _4_ ( .A0(_0_), .A1(_1_), .S(_2_), .X(_3_)  );
+  assign _0_ = i0;
+  assign _1_ = i1;
+  assign _2_ = sel;
+  assign y = _3_;
+endmodule
+```
+
+# NOTE
+Here on the commands being used have a similar format.
+
+1. Simulation in iVerilog
+```
+iverilog designfilename.v testbench.v
+```
+
+2. To run the file
+```
+./a.out
+```
+
+3. To plot waveforms
+```
+gtkwave dumpfilefilename.vcd
+```
+
+4. To invoke Yosys
+```
+yosys
+```
+
+5. To read liberty file
+```
+read_liberty -lib library_file_path
+```
+
+6. To read the verilog file
+```
+read_verilog designfilename.v
+```
+
+7. To synthesize the top level module
+```
+synth -top module_name
+```
+
+8. To read the standard cell libraries
+```
+abc -liberty library_file_path
+```
+
+9. To show the synthesis diagram
+```
+show
+```
+
+10. To generate the netlist file
+```
+write_verilog -noattr netlistfilename.v
+```
+
+11. To create a flat synthesis
+```
+flatten
+```
+
+12.
 
 # 3. DAY 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 ## 3.1 SKY130RTL D2SK1 - Introduction to timing dot libs
-### 3.1.1 SKY130RTL D2SK1 L1 Lab4 Introduction to dot lib part1
-### 3.1.2 SKY130RTL D2SK1 L2 Lab4 Introduction to dot lib part2
-### 3.1.3 SKY130RTL D2SK1 L3 Lab4 Introduction to dot lib part3
+### 3.1.1 SKY130RTL D2SK1 L1 Lab4 Introduction to dot lib 
+PVT (Process Voltage Temperature) determines the silicon working
+
+tt in the file name means typical
+025C in the file indicates temperature
+1v80 in the file name indicates operating voltage
+
+.lib will contain leakage power for every input combination possible
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183923690-972e6de6-9e75-4eb1-b3ef-f9f1c44683f2.png"> <br>
+</p>
+
+.lib contains the delay, area occupied and much more information for each cell.
+
 ## 3.2 SKY130RTL D2SK2 - Hierarchical vs Flat Synthesis
-### 3.2.1 SKY130RTL D2SK2 L1 Lab 5 Hierarchical vs Flat Synthesis part1
-### 3.2.2 SKY130RTL D2SK2 L2 Lab 5 Hierarchical vs Flat Synthesis part2
+
+```
+Code for Multiple Modules
+
+module sub_module2 (input a, input b, output y);
+	assign y = a | b;
+endmodule
+
+module sub_module1 (input a, input b, output y);
+	assign y = a&b;
+endmodule
+
+module multiple_modules (input a, input b, input c , output y);
+	wire net1;
+	sub_module1 u1(.a(a),.b(b),.y(net1));  //net1 = a&b
+	sub_module2 u2(.a(net1),.b(c),.y(y));  //y = net1|c ,ie y = a&b + c;
+endmodule
+```
+
+When multiple submodules are combined to form a single top level module. Two types of Synthesis is possible.
+
+<b> 1. Hierarchical Synthesis: </b> <br>
+In hierarchical synthesis the submodules are preserved and shown while seeing the synthesis diagram. <br>
+
+In the figure below we can see 2 submodules namely sub_module1 and sub_module2. Hence the hierarchy is preserved.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183948156-a69076be-e0a8-4759-817c-62140054e6cd.png"> <br>
+Hierarchical Synthesis
+</p>
+
+<b> 2. Flat Synthesis: </b> <br>
+In flat synthesis the submodules are removed and normal gates are implemented.<br>
+
+In the figure below we can see only gates there are no submodules preserved.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183948326-6b304745-6ca6-4769-b3bb-28c300459007.png"> <br>
+Flat Synthesis
+</p>
+
 ## 3.3 SKY130RTL D2SK3 - Various Flop Coding Styles and Optimization
-### 3.3.1 SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1
-### 3.3.2 SKY130RTL D2SK3 L2 Why Flops and Flop coding styles part2
-### 3.3.3 SKY130RTL D2SK3 L3 lab Flop Synthesis Simulation part1
-### 3.3.4 SKY130RTL D2SK3 L4 lab Flop Synthesis Simulation part2
-### 3.3.5 SKY130RTL D2SK3 L5 Interesting Optimisations part1
-### 3.3.6 SKY130RTL D2SK3 L6 Interesting Optimisations part2
+### 3.3.1 SKY130RTL D2SK3 L1 Why Flops and Flop coding styles
+- Flops are used to reduce glitching and stabilize the circuits. <br>
+
+The various coding styles of flops are: <br>
+1. Flop with Synchronous Reset : It resets the flop with respect to condition of the clock
+2. Flop with Synchronous Set : It sets the flop with respect to condition of the clock
+3. Flop with Asynchronous Reset : It resets the flop irrespect of the condition of the clock
+4. Flop with Asynchronous Set : It sets the flop irrespect of the condition of the clock
+5. Flop with both Synchronous and Asynchronous Reset : It resets the flop both with respect to condition of the clock and irrespective of it.
+
+### 3.3.2 SKY130RTL D2SK3 L3 lab Flop Synthesis Simulation 
+
+### 3.3.3 SKY130RTL D2SK3 L5 Interesting Optimisations 
 
 # 4. DAY 3 - Combinational and Sequential Optimizations
 ## 4.1 SKY130RTL D3SK1 - Introduction to Optimizations
