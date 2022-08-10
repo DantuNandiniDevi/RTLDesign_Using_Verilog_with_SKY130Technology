@@ -102,9 +102,20 @@ This is a submission of the cloud based 5-Day Workshop on RTL Design Using Veril
 
 The labs are being performed on a Ubuntu operating system with due installation of all the tools used.
 
+RTL(Register Transfer Language) is a coding style used to code sequential and combinational circuits in HDL like Verilog or VHDL. RTL codes are further simulated to check the behaviour and sythesised to do a physical layout and produce a chip. The flow followed for this development cycle is called a ASIC(Application Specific Integrated Circuit) design flow. 
+<br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/62461290/183838617-507472a5-f22c-4936-a3f9-066ad5c48d3b.jpg"> <br>
+ASIC Design Flow Samir Palnitkar
+</p>
+
 # 2. Day 1 - Introduction to Verilog RTL Design and Synthesis
 ## 2.1 SKY130RTL D1SK1 - Introduction to open-source simulator iverilog
 ### 2.1.1 SKY130RTL D1SK1 L1 Introduction iverilog design and test bench
+<b> Simulator </b>
+
+
+
 ## 2.2 SKY130RTL D1SK2 - Labs using iverilog  and gtkwave
 ### 2.2.1 SKY130RTL D1SK2 L1 Lab 1 Introduction to Lab
 ### 2.2.2 SKY130RTL D1SK2 L2 Lab 2 Introduction to iVerilog GTKWave part1
