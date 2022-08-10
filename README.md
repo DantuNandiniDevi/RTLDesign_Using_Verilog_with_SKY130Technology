@@ -226,9 +226,17 @@ Verification of Synthesized Netlist
 </p>
 
 ### 2.3.2 SKY130RTL D1SK3 L2 Introduction to logic synthesis part1
-<b> Synthesis: </b>
-- The RTL gn is converted into gates and the connections are made between gates.
-- This is given out as a file called netlist
+<b> Synthesis: </b> <br>
+- The RTL design is converted into gates and the connections are made between gates. <br>
+- This is given out as a file called netlist. <br>
+
+<b> .lib </b>
+- It contains all different kind of logic modules. like AND, OR, NOR etc.<br>
+- It contains different variants of the same gate as well. like 2i/p, 3i/p, 4i/p, slow, fast, medium gates etc.<br>
+
+There are different kind of gates avaiable to take in account the performance parameters like Delay, Area, Power into consideration. <br>
+- If we choose speed we trade off area and power likewise if we choose area we trade off delay. Hence we have to choose them either based on the design constrains or find a sweet spot between all of them.
+
 ### 2.3.3 SKY130RTL D1SK3 L3 Introduction to logic synthesis part2
 ## 2.4 SKY130RTL D1SK4 - Labs Using Yosys and SKY130 PDKs
 ### 2.4.1 SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux part1
